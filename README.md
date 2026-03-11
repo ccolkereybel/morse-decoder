@@ -63,20 +63,3 @@ This project is configured for easy deployment to Firebase Hosting.
         firebase deploy --only hosting  
         After the command completes, the terminal will provide you with the live URL for your deployed application.  
 
-
-## Parsing Approach and Design Notes
-
-The core logic for decoding is contained within the src/morse.ts file, keeping it separate from the React UI components.  
-
-•   ​Input Handling​: The parser first trims any leading/trailing whitespace. It then normalizes the input by replacing all newline characters (\n) with the standard word separator (3 spaces), ensuring consistent parsing.  
-•   ​Invalid Characters​: Before decoding, the entire input string is scanned for any characters other than ., -, spaces, or newlines. If any are found, a warning message is generated.  
-•   ​Decoding Logic​: The application splits the normalized input first by word separators, and then by letter separators. Each resulting token is mapped against a Morse code dictionary.  
-•   ​Edge Case: Invalid Tokens​: As documented in the code, if a token containing invalid characters (e.g., ---a) is encountered, it is not found in the Morse map. The entire token is consistently converted to a single ? in the final output, and a warning is displayed to the user.  
-
-## Future Improvements
-
-Given more time, the following features could be implemented:  
-
-•   ​Encode Mode​: An option to convert plain text into Morse code.  
-•   ​Copy to Clipboard​: A button to easily copy the decoded output.  
-•   ​Unit Tests​: Add tests for the decodeMorse function to verify its logic against various edge cases.  
