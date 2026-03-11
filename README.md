@@ -42,8 +42,7 @@ Prerequisites
 ## Running the Application Locally  
 
 To start the development server:  
-
-npm run dev  
+    npm run dev  
 
 
 This will run the app in development mode. Open http://localhost:5173 (or the URL provided in your terminal) to view it in your browser. The page will reload automatically when you make edits.  
@@ -54,8 +53,11 @@ This project is configured for easy deployment to Firebase Hosting.
 
 1.  ​Install the Firebase CLI globally​:    
         npm install -g firebase-tools  
-    2.  ​Login to Firebase: firebase login    
-    3.  ​Build the project for production: npm run build  
-    4.Deploy to Firebase Hosting:  firebase deploy --only hosting  
+    2.  ​Login to Firebase:  
+            firebase login    
+    3.  ​Build the project for production:  
+            npm run build  
+    4.  Deploy to Firebase Hosting:  
+        firebase deploy --only hosting  
         After the command completes, the terminal will provide you with the live URL for your deployed application.  
 
