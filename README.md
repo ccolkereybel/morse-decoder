@@ -54,12 +54,8 @@ This project is configured for easy deployment to Firebase Hosting.
 
 1.  ​Install the Firebase CLI globally​:    
         npm install -g firebase-tools  
-    2.  ​Login to Firebase:  
-        firebase login    
-    3.  ​Build the project for production:  
-    This command creates a dist folder with the optimized, static files for your app.  
-        npm run build  
-    4.Deploy to Firebase Hosting:  
-        firebase deploy --only hosting  
+    2.  ​Login to Firebase: firebase login    
+    3.  ​Build the project for production: npm run build  
+    4.Deploy to Firebase Hosting:  firebase deploy --only hosting  
         After the command completes, the terminal will provide you with the live URL for your deployed application.  
 
